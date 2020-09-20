@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'checkout', component: CheckoutComponent },
+      { path: '', redirectTo: '/shopping-cart', pathMatch: 'full' },
     ]),
   ],
   providers: [],
