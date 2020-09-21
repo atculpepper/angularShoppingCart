@@ -17,20 +17,21 @@
     <title>Angular Shopping</title>
   </head>
   <body>
-    <router-outlet></router-outlet>
-
-    <nav>
-      <a
-        class="button"
-        routerLinkActive="activebutton"
-        routerLink="/shopping-cart"
-        >Shopping Cart</a
-      >
-      |
-      <a class="button" routerLink="/checkout" routerLinkActive="activebutton"
-        >Checkout</a
-      >
-    </nav>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+      <nav>
+        <a
+          class="button"
+          routerLinkActive="activebutton"
+          routerLink="/shopping-cart"
+          >Shopping Cart</a
+        >
+        |
+        <a class="button" routerLink="/checkout" routerLinkActive="activebutton"
+          >Checkout</a
+        >
+      </nav>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
