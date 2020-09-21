@@ -6,9 +6,17 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
+import { ProductListComponent } from './shopping-cart/product-list/product-list.component';
 
 @NgModule({
-  declarations: [AppComponent, ShoppingCartComponent, CheckoutComponent],
+  declarations: [
+    AppComponent,
+    ShoppingCartComponent,
+    CheckoutComponent,
+    ProductItemComponent,
+    ProductListComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
