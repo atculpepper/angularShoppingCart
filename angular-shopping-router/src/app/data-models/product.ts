@@ -24,4 +24,7 @@ export class Product {
     this.quantity = quantity;
     this.inCart = inCart;
   }
+
+
+
 }

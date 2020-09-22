@@ -17,8 +17,20 @@ export class ProductService {
   ];
 
   constructor() {}
-  //eventually populate it from an API
+
+  //eventually populate it from an API -- this method is to get all products
   getProducts(): Product[] {
     return this.products;
+  }
+
+  //get product by id
+  getProductsById(id: number): Product {
+    return this.products.filter((product) => product.id === id).pop();
+  }
+
+  //Delete /products/:id
+  deleteProductById(id: number): ProductService {
+    this.products = this.products.filter((products) => products.id !== id);
+    return this;
   }
 }

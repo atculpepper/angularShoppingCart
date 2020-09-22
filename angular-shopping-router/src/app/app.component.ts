@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ProductService} from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +13,16 @@ import { Component } from '@angular/core';
       <router-outlet></router-outlet>
     </div>
   `,
+  providers: [ProductService],
 
   // templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'angular-shopping-router';
+  //below is shorthand for saying this.productService = ProductService
+  constructor ( private productService : ProductService){
+
+    
+  }
 }
