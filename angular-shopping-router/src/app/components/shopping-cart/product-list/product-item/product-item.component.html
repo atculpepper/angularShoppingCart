@@ -33,6 +33,7 @@
     <div class="mr-5">
       <input
         type="number"
+        min="0"
         class="form-control input-sm max-60"
         [(ngModel)]="productItem.quantity"
         (change)="onProductQuantityChanged()"
