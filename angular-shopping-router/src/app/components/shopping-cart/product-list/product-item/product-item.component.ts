@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/data-models/product';
 
 @Component({
@@ -9,8 +9,12 @@ import { Product } from 'src/app/data-models/product';
 export class ProductItemComponent implements OnInit {
   //putting this productItem on the productItem component class -- comes in from the parent as an Input (use Input decorator)
   @Input() productItem: Product;
-
+  @Output() productQuantityChanged = new EventEmitter<void>();
   constructor() {}
 
   ngOnInit(): void {}
+
+  onProductQuantityChanged() {
+    this.productQuantityChanged.emit();
+  }
 }

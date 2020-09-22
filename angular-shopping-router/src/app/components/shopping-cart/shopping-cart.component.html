@@ -36,11 +36,13 @@
         <div class="panel-body">
           <hr />
           <div>
-            <app-product-list></app-product-list>
+            <app-product-list
+              (productsUpdated)="updateProducts()"
+            ></app-product-list>
           </div>
 
           <hr />
-          <div class="row">
+          <!-- <div class="row">
             <div class="text-center">
               <div class="col-xs-9">
                 <h6 class="text-right">Added items?</h6>
@@ -51,21 +53,22 @@
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="panel-footer">
-          <div class="row text-center">
-            <div class="col-xs-9">
-              <h4 class="text-right">
-                Total <strong>{{ 50 | currency: "USD" }}</strong>
-              </h4>
-            </div>
-            <div class="col-xs-3">
-              <a routerLink="/checkout">
-                <button type="button" class="btn btn-success btn-block">
-                  Checkout
-                </button>
-              </a>
+          </div> 
+        </div>-->
+          <div class="panel-footer">
+            <div class="row text-center">
+              <div class="col-xs-9">
+                <h4 class="text-right">
+                  Total <strong>{{ total | currency: "USD" }}</strong>
+                </h4>
+              </div>
+              <div class="col-xs-3">
+                <a routerLink="/checkout">
+                  <button type="button" class="btn btn-success btn-block">
+                    Checkout
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

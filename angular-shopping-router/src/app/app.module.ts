@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { ShoppingCartComponent } from 'src/app/components/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from 'src/app/components/checkout/checkout.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
-import { ProductListComponent } from './shopping-cart/product-list/product-list.component';
+import { ProductItemComponent } from 'src/app/components/shopping-cart/product-list/product-item/product-item.component';
+import { ProductListComponent } from 'src/app/components/shopping-cart/product-list/product-list.component';
 
 @NgModule({
   declarations: [

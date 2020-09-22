@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/data-models/product';
@@ -8,11 +8,22 @@ import { Product } from 'src/app/data-models/product';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
 })
+
+/*export class ShoppingCartContents {
+  products: Product[];
+  total: number;
+}*/
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
+  @Output() productsUpdated = new EventEmitter<void>();
   constructor(private productService: ProductService) {}
 
   ngOnInit() {
     this.productList = this.productService.getProducts();
+  }
+
+  onProductQuantityChanged() {
+    this.productsUpdated.emit();
+    
   }
 }

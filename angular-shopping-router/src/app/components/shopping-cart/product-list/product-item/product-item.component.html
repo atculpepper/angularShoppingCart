@@ -31,7 +31,12 @@
       </h6>
     </div>
     <div class="mr-5">
-      <input type="number" class="form-control input-sm max-60" value="0" />
+      <input
+        type="number"
+        class="form-control input-sm max-60"
+        [(ngModel)]="productItem.quantity"
+        (change)="onProductQuantityChanged()"
+      />
     </div>
     <div>
       <button type="button" class="btn btn-link btn-xs">
