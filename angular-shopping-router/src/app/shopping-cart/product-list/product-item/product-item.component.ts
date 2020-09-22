@@ -7,6 +7,7 @@ import { Product } from 'src/app/data-models/product';
   styleUrls: ['./product-item.component.css'],
 })
 export class ProductItemComponent implements OnInit {
+  //putting this productItem on the productItem component class -- comes in from the parent as an Input (use Input decorator)
   @Input() productItem: Product;
 
   constructor() {}
