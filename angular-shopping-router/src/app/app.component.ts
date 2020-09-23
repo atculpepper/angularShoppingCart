@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {ProductService} from 'src/app/services/product.service';
+import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/data-models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -19,10 +20,33 @@ import {ProductService} from 'src/app/services/product.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  productList: Product[] = [];
   title = 'angular-shopping-router';
-  //below is shorthand for saying this.productService = ProductService
-  constructor ( private productService : ProductService){
+  total = 0;
 
-    
+  //below is shorthand for saying this.productService = ProductService
+  constructor(private productService: ProductService) {}
+
+  removeProductItem(productItem) {
+    this.productService.deleteProductById(productItem.id);
+  }
+
+  getProducts() {
+    return this.productService.getProducts();
+  }
+
+  ngOnInit() {}
+
+  // updateProducts() {
+  //   this.productsDataService.updateProducts(this.productList);
+  //   this.calculateTotal();
+  // }
+
+  calculateTotal() {
+    let total = 0;
+    this.productList.forEach((product) => {
+      total += product.price * product.quantity;
+    });
+    this.total = total;
   }
 }
