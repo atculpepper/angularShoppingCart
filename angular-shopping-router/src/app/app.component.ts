@@ -35,12 +35,7 @@ export class AppComponent {
     return this.productService.getProducts();
   }
 
-  ngOnInit() {}
 
-  // updateProducts() {
-  //   this.productsDataService.updateProducts(this.productList);
-  //   this.calculateTotal();
-  // }
 
   calculateTotal() {
     let total = 0;

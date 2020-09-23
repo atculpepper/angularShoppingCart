@@ -20,7 +20,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   removeProductItem(item: Product) {
-    debugger;
+    debugger
     this.productService.deleteProductById(item.id);
   }
 }
